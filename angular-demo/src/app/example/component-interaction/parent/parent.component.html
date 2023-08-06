@@ -1,0 +1,9 @@
+<p>-----------------Component Parent -----------------</p>
+<p>Message from child: {{childMessageOutput}}</p>
+<p >Message from child (ViewChild): {{childMessageViewChild }}</p>
+<p >Message from Service: {{serviceMessage }}</p>
+
+<button type="button"(click)="timer.parentMessage = 'Local variable'">Send Child (local variable)</button>
+<app-child [parentMessage]="parentMessageInput" (childMessage)="getMessageChild($event)" #timer></app-child>
+
+
